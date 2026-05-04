@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jai Club - सभी Games | Login Register | Official</title>
+    
+    <!-- SEO Meta -->
+    <meta name="description" content="Jai Club login register download app. Wingo, Aviator, Slots, K3, 5D lottery games. Instant withdrawal.">
+    <meta property="og:title" content="Jai Club - Official Gaming Platform">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0b1f3a 0%, #1a3a6a 50%, #2a4a8a 100%);
+            color: white;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(90deg, #102a54, #1e40af);
+            padding: 15px 20px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header h1 {
+            font-size: 28px;
+            font-weight: bold;
+        }
+        
+        .nav-tabs {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        
+        .tab-btn {
+            padding: 10px 20px;
+            background: rgba(255,255,255,0.1);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-size: 14px;
+            transition: all 0.3s;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        .tab-btn.active, .tab-btn:hover {
+            background: #1e90ff;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(30,144,255,0.4);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .section {
+            display: none;
+            animation: fadeIn 0.5s ease-in;
+        }
+        
+        .section.active {
+            display: block;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .hero {
+            text-align: center;
+            padding: 40px 20px;
+            background: rgba(0,0,0,0.3);
+            border-radius: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .hero h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            background: linear-gradient(45deg, #ffd700, #ffed4e);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 18px 35px;
+            margin: 10px;
+            background: linear-gradient(45deg, #1e90ff, #0073e6);
+            color: white;
+            text-decoration: none;
+            border-radius: 15px;
+            font-size: 18px;
+            font-weight: 600;
+            box-shadow: 0 8px 25px rgba(30,144,255,0.4);
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(30,144,255,0.6);
+        }
+        
+        .btn-secondary {
+            background: linear-gradient(45deg, #ff6b6b, #ee5a52);
+        }
+        
+        .btn-success {
+            background: linear-gradient(45deg, #10b981, #059669);
+        }
+        
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+        
+        .card {
+            background: rgba(19, 47, 94, 0.8);
+            backdrop-filter: blur(15px);
+            padding: 30px;
+            border-radius: 20px;
+            border: 1px solid rgba(255,255,255,0.1);
+            text-align: center;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #1e90ff, #ffd700);
+        }
+        
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+        
+        .game-icon {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+        
+        .features-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .feature-item {
+            background: rgba(255,255,255,0.05);
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+        }
+        
+        .footer {
+            background: #102a54;
+            padding: 30px 20px;
+            text-align: center;
+            margin-top: 50px;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h2 { font-size: 28px; }
+            .btn { display: block; width: 90%; margin: 10px auto; }
+            .nav-tabs { flex-direction: column; align-items: center; }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <div class="header">
+        <h1>🎮 Jai Club - Official Platform</h1>
+        <div class="nav-tabs">
+            <a href="#" class="tab-btn active" onclick="showSection('home')">🏠 Home</a>
+            <a href="#" class="tab-btn" onclick="showSection('login')">🔑 Login/Register</a>
+            <a href="#" class="tab-btn" onclick="showSection('games')">🎮 Games</a>
+            <a href="#" class="tab-btn" onclick="showSection('download')">📱 Download</a>
+            <a href="#" class="tab-btn" onclick="showSection('rewards')">💰 Rewards</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Home Section -->
+        <section id="home" class="section active">
+            <div class="hero">
+                <h2>🚀 Jai Club में Welcome!</h2>
+                <p>सबसे तेज़ Gaming Platform | Instant Withdrawal | Daily Bonus</p>
+                <br>
+                <a href="https://www.jaiclub32.com/#/register?invitationCode=681271003496" class="btn">📱 अभी Register करें</a>
+                <a href="https://www.jaiclub32.com/#/login?invitationCode=681271003496" class="btn btn-secondary">🔑 Login करें</a>
+            </div>
+
+            <div class="features-list">
+                <div class="feature-item">
+                    <div style="font-size: 40px;">⚡</div>
+                    <h3>Instant Withdrawal</h3>
+                    <p>5 मिनट में पैसे आपके अकाउंट में</p>
+                </div>
+                <div class="feature-item">
+                    <div style="font-size: 40px;">💰</div>
+                    <h3>Daily Bonus</h3>
+                    <p>हर दिन Free Bonus मिलेगा</p>
+                </div>
+                <div class="feature-item">
+                    <div style="font-size: 40px;">🎯</div>
+                    <h3>Easy Games</h3>
+                    <p>नए खिलाड़ियों के लिए भी आसान</p>
+                </div>
+                <div class="feature-item">
+                    <div style="font-size: 40px;">📱</div>
+                    <h3>Mobile App</h3>
+                    <p>Android & iOS दोनों के लिए</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Login/Register Section -->
+        <section id="login" class="section">
+            <div class="hero">
+                <h2>🔐 Login & Register</h2>
+                <p>2 मिनट में Account बनाएं और खेलना शुरू करें</p>
+                <br>
+                <a href="https://www.jaiclub32.com/#/register?invitationCode=681271003496" class="btn">➕ नया Account</a>
+                <a href="https://www.jaiclub32.com/#/login?invitationCode=681271003496" class="btn btn-secondary">✅ Login</a>
+                <a href="#" class="btn btn-success">💎 ₹100 Free Bonus</a>
+            </div>
+        </section>
+
+        <!-- Games Section -->
+        <section id="games" class="section">
+            <h2 style="text-align: center; font-size: 32px; margin-bottom: 40px;">🎮 सभी Popular Games</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <div class="game-icon">🎲</div>
+                    <h3>Wingo</h3>
+                    <p>सबसे आसान और तेज़ Lottery Game<br>हर 3 मिनट में Result</p>
+                    <a href="#" class="btn" style="font-size: 16px; padding: 12px 20px;">खेलें</a>
+                </div>
+                <div class="card">
+                    <div class="game-icon">✈️</div>
+                    <h3>Aviator</h3>
+                    <p>Plane Crash Game<br>High Risk High Reward</p>
+                    <a href="#" class="btn" style="font-size: 16px; padding: 12px 20px;">खेलें</a>
+                </div>
+                <div class="card">
+                    <div class="game-icon">🎰</div>
+                    <h3>Slots</h3>
+                    <p>500+ Slot Machines<br>Jackpot हर घंटे</p>
+                    <a href="#" class="btn" style="font-size: 16px; padding: 12px 20px;">खेलें</a>
+                </div>
+                <div class="card">
+                    <div class="game-icon">🔢</div>
+                    <h3>K3 Lottery</h3>
+                    <p>Fast Pace Lottery<br>90% Win Rate</p>
+                    <a href="#" class="btn" style="font-size: 16px; padding: 12px 20px;">खेलें</a>
+                </div>
+                <div class="card">
+                    <div class="game-icon">⭐</div>
+                    <h3>5D Lottery</h3>
+                    <p>Advanced Lottery<br>Multiple Winning Options</p>
+                    <a href="#" class="btn" style="font-size: 16px; padding: 12px 20px;">खेलें</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Download Section -->
+        <section id="download" class="section">
+            <div class="hero">
+                <h2>📱 App Download</h2>
+                <p>Android APK Direct Download | No Play Store Needed</p>
+                <br>
+                <a href="#" class="btn btn-secondary" style="font-size: 20px;">📲 Android APK (25MB)</a>
+                <a href="#" class="btn btn-success" style="font-size: 20px;">💻 iOS App</a>
+            </div>
+            
+            <div style="text-align: center; margin-top: 40px;">
+                <h3>✅ App Features</h3>
+                <p>Offline Login • Push Notifications • Fast Loading • No Ads</p>
+            </div>
+        </section>
+
+        <!-- Rewards Section -->
+        <section id="rewards" class="section">
+            <h2 style="text-align: center; font-size: 32px; margin-bottom: 40px;">💰 Rewards & Bonus</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <div style="font-size: 60px;">🎁</div>
+                    <h3>Sign Up Bonus</h3>
+                    <p>₹100 Free<br>पहली Deposit पर</p>
+                </div>
+                <div class="card">
+                    <div style="font-size: 60px;">📈</div>
+                    <h3>Daily Bonus</h3>
+                    <p>₹50 - ₹500<br>हर दिन Login करें</p>
+                </div>
+                <div class="card">
+                    <div style="font-size: 60px;">👥</div>
+                    <h3>Referral Bonus</h3>
+                    <p>₹200 per Friend<br>Unlimited Referrals</p>
+                </div>
+                <div class="card">
+                    <div style="font-size: 60px;">🏆</div>
+                    <h3>Weekly Jackpot</h3>
+                    <p>₹1 Lakh Prize<br>Top 10 Players</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>© 2026 Jai Club Official | <a href="#" style="color: #1e90ff;">Support</a> | <a href="#" style="color: #1e90ff;">Privacy</a></p>
+        <p>⚠️ 18+ Only | Responsible Gaming | Invitation Code: <strong>681271003496</strong></p>
+    </div>
+
+    <script>
+        function showSection(sectionId) {
+            // Hide all sections
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => section.classList.remove('active'));
+            
+            // Remove active from all tabs
+            const tabs = document.querySelectorAll('.tab-btn');
+            tabs.forEach(tab => tab.classList.remove('active'));
+            
+            // Show selected section
+            document.getElementById(sectionId).classList.add('active');
+            
+            // Activate current tab
+            event.target.classList.add('active');
+            
+            // Smooth scroll to top
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
